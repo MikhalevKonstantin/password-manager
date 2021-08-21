@@ -5,7 +5,7 @@ class SearchLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
+    return TextField(
       controller: TextEditingController(),
       focusNode: FocusNode(),
       decoration: InputDecoration(
@@ -19,7 +19,8 @@ class SearchLogin extends StatelessWidget {
         hintText: 'Search login',
         hintStyle: Theme.of(context).textTheme.bodyText1,
         prefixIcon: IconButton(
-          icon: Icon(Icons.search_rounded), onPressed: () {  },
+          icon: Icon(Icons.search_rounded),
+          onPressed: () {},
         ),
       ),
     );
