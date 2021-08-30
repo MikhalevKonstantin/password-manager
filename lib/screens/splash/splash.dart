@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:password_manager/screens/logins/logins.dart';
+import 'package:password_manager/theme/color_theme.dart';
 
 class Splash extends StatefulWidget {
   @override
@@ -20,10 +21,22 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
+    final stops = [0.0, 0.9];
     return Scaffold(
-      backgroundColor: Colors.blue.shade50,
-      body: Center(
-        child: Text('Welcome'),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xff1782ff),
+            Color(0xff53c1fc),
+            ],
+          ),
+        ),
+        child: Center(
+          child: Image.asset('assets/images/Group 8510.png'),
+        ),
       ),
     );
   }
