@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:password_manager/components/decoration_box.dart';
 import 'dart:async';
 
 import 'package:password_manager/screens/logins/logins.dart';
@@ -21,21 +22,13 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    final stops = [0.0, 0.9];
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color(0xff1782ff),
-            Color(0xff53c1fc),
-            ],
-          ),
-        ),
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        decoration: decorationBox(),
         child: Center(
-          child: Image.asset('assets/images/Group 8510.png'),
+          child: Image.asset('assets/images/keyhole167.png'),
         ),
       ),
     );
