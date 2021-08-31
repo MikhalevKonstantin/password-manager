@@ -14,9 +14,8 @@ class ColorPalette {
   static var c9FA2B2 = Color(0xff9FA2B2);
   static var cF35748 = Color(0xffF35748);
 
-
   static var cF2F2F2 = Color(0xffF2F2F2);
   static var cFCFCFE = Color(0xffFCFCFE);
   static var cFF0000 = Color(0xffFF0000);
-
+  static var ce5e5e5 = Color(0xffE5E5E5);
 }
