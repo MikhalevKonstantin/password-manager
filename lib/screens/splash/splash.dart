@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:password_manager/components/decoration_box.dart';
+import 'package:password_manager/screens/choose%20password/choose_password.dart';
 import 'dart:async';
 
-import 'package:password_manager/screens/logins/logins.dart';
 import 'package:password_manager/theme/color_theme.dart';
 
 class Splash extends StatefulWidget {
@@ -17,7 +17,7 @@ class _SplashState extends State<Splash> {
     Timer(
         Duration(seconds: 3),
         () => Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (BuildContext context) => Logins())));
+            MaterialPageRoute(builder: (BuildContext context) => ChoosePassword())));
   }
 
   @override
