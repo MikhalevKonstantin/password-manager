@@ -8,8 +8,6 @@ import 'package:password_manager/theme/color_theme.dart';
 
 
 class MainOff extends StatefulWidget {
-  // const MainScreen({Key? key}) : super(key: key);
-
   @override
   _MainScreenState createState() => _MainScreenState();
 }

@@ -41,7 +41,10 @@ class _ChoosePasswordState extends State<ChoosePassword> {
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
-                child: Image.asset('assets/images/BG pattern.png', fit: BoxFit.fill,),
+                child: Image.asset(
+                  'assets/images/BG pattern.png',
+                  fit: BoxFit.fill,
+                ),
               ),
               Column(
                 //crossAxisAlignment: CrossAxisAlignment.start,
@@ -101,11 +104,12 @@ class _ChoosePasswordState extends State<ChoosePassword> {
                                     suffixIcon: IconButton(
                                       icon: _hidePass
                                           ? SvgPicture.asset(
-                                              'assets/svg_icons/eye.svg',
+                                              'assets/svg_icons/eyecl.svg',
                                               color: ColorPalette.white,
                                             )
                                           : SvgPicture.asset(
-                                              'assets/svg_icons/eyecl.svg',
+                                              'assets/svg_icons/eye.svg',
+                                        color: ColorPalette.white,
                                             ),
                                       onPressed: () {
                                         setState(() {
@@ -141,11 +145,12 @@ class _ChoosePasswordState extends State<ChoosePassword> {
                                       color: ColorPalette.white,
                                       icon: _hidePass
                                           ? SvgPicture.asset(
-                                              'assets/svg_icons/eye.svg',
+                                              'assets/svg_icons/eyecl.svg',
                                               color: ColorPalette.white,
                                             )
                                           : SvgPicture.asset(
-                                              'assets/svg_icons/eyecl.svg',
+                                              'assets/svg_icons/eye.svg',
+                                              color: ColorPalette.white,
                                             ),
                                       onPressed: () {
                                         setState(
