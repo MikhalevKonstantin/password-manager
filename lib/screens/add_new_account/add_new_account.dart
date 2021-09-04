@@ -58,7 +58,7 @@ class _AddNewAccountState extends State<AddNewAccount> {
                    child: Container(
                      width:  MediaQuery.of(context).size.width,
                      child: Padding(
-                       padding: const EdgeInsets.only(left: 46, right: 46),
+                       padding: const EdgeInsets.all(20.0),
                        child: Row(
                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                          //crossAxisAlignment: Cross,

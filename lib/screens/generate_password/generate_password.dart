@@ -45,7 +45,11 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                     width: MediaQuery.of(context).size.width - 110,
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
-                      child: Text('fbSNDCctQx34gCJny'),
+                      child: Text(
+                        'fbSNDCctQx34gCJny',
+                        style: TextThemes.hedline_10
+                            .copyWith(color: ColorPalette.c3A3943),
+                      ),
                     ),
                   ),
                   SizedBox(width: 10),
@@ -69,7 +73,8 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      child: Text('4'),
+                      child: Text('4',style: TextThemes.hedline_5
+                          .copyWith(color: ColorPalette.c3A3943),),
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width - 80,
@@ -87,7 +92,8 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                           }),
                     ),
                     Container(
-                      child: Text('32'),
+                      child: Text('32',style: TextThemes.hedline_2
+                          .copyWith(color: ColorPalette.c3A3943),),
                     ),
                   ],
                 ),
@@ -108,7 +114,8 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Allow All Character Types'),
+                      Text('Allow All Character Types',style: TextThemes.hedline_2
+                          .copyWith(color: ColorPalette.c3A3943),),
                       GestureDetector(
                           onTap: () {},
                           child: SvgPicture.asset('assets/svg_icons/done.svg'))
@@ -127,7 +134,8 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Use Uppercase (A-Z)'),
+                      Text('Use Uppercase (A-Z)',style: TextThemes.hedline_2
+                          .copyWith(color: ColorPalette.c3A3943),),
                       GestureDetector(
                         onTap: () {
                           setState(() {
@@ -159,7 +167,8 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Use Lowercase (a-z)'),
+                      Text('Use Lowercase (a-z)',style: TextThemes.hedline_2
+                          .copyWith(color: ColorPalette.c3A3943),),
                       GestureDetector(
                         onTap: () {
                           setState(() {
@@ -191,7 +200,8 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Include symbols (!@#%)'),
+                      Text('Include symbols (!@#%)',style: TextThemes.hedline_2
+                          .copyWith(color: ColorPalette.c3A3943),),
                       GestureDetector(
                         onTap: () {
                           setState(() {
@@ -223,7 +233,8 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Include numbers (0-9)'),
+                      Text('Include numbers (0-9)',style: TextThemes.hedline_2
+                          .copyWith(color: ColorPalette.c3A3943),),
                       GestureDetector(
                         onTap: () {
                           setState(() {
@@ -244,12 +255,11 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                   ),
                 ),
               ),
-
               GestureDetector(
                 onTap: () {},
                 child: Center(
                   child: Container(
-                    width:  MediaQuery.of(context).size.width - 80,
+                    width: MediaQuery.of(context).size.width - 80,
                     height: 48,
                     decoration: BoxDecoration(
                       border: Border.all(width: 2, color: ColorPalette.c53c1fc),

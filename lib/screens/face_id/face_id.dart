@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:password_manager/screens/main_of/main_of.dart';
 import 'package:password_manager/theme/color_theme.dart';
 import 'package:password_manager/theme/text_theme.dart';
 
@@ -74,7 +75,12 @@ class _FaceIDState extends State<FaceID> {
                     child: CupertinoButton(
                       disabledColor: ColorPalette.c53c1fc,
                       borderRadius: BorderRadius.circular(20),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          CupertinoPageRoute(builder: (context) => MainOff()),
+                        );
+                      },
                       child: Text(
                         'Skip for now',
                         style: TextThemes.hedline_4
