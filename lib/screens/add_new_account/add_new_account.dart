@@ -73,6 +73,7 @@ class _AddNewAccountState extends State<AddNewAccount> {
                              child: IconButton(
                                icon: SvgPicture.asset('assets/svg_icons/Left Icon.svg'),
                                onPressed: () {
+                                 Navigator.of(context).pop();
                                },
                              ),
                            ),
