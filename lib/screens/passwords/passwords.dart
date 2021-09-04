@@ -36,7 +36,8 @@ class _PasswordsState extends State<Passwords> {
                   style:
                       TextThemes.hedline_9.copyWith(color: ColorPalette.c3D3B3B),
                 ),
-                trailing: SvgPicture.asset('assets/svg_icons/add new.svg'),
+                trailing: GestureDetector(onTap: () {},
+                    child: SvgPicture.asset('assets/svg_icons/add new.svg')),
               ),
               TextField(
                 //cursorColor: ColorPalette.white,
