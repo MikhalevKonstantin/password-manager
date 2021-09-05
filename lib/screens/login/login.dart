@@ -40,7 +40,10 @@ class _LoginState extends State<Login> {
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
-                child: Image.asset('assets/images/BG pattern.png', fit: BoxFit.fill,),
+                child: Image.asset(
+                  'assets/images/BG pattern.png',
+                  fit: BoxFit.fill,
+                ),
               ),
               Column(
                 //crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,11 +109,12 @@ class _LoginState extends State<Login> {
                                     suffixIcon: IconButton(
                                       icon: _hidePass
                                           ? SvgPicture.asset(
-                                              'assets/svg_icons/eye.svg',
+                                              'assets/svg_icons/eyecl.svg',
                                               color: ColorPalette.white,
                                             )
                                           : SvgPicture.asset(
-                                              'assets/svg_icons/eyecl.svg',
+                                              'assets/svg_icons/eye.svg',
+                                              color: ColorPalette.white,
                                             ),
                                       onPressed: () {
                                         setState(() {
@@ -136,9 +140,9 @@ class _LoginState extends State<Login> {
                                   onPressed: _submitForm,
                                   color: Colors.white,
                                   child: Text(
-                                    'Continue',
-                                    style: TextThemes.hedline_4.copyWith(
-                                        color: ColorPalette.c53c1fc),
+                                    'Login',
+                                    style: TextThemes.hedline_4
+                                        .copyWith(color: ColorPalette.c53c1fc),
                                   ),
                                 ),
                               ),

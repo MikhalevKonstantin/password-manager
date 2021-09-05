@@ -109,7 +109,7 @@ class _ChoosePasswordState extends State<ChoosePassword> {
                                             )
                                           : SvgPicture.asset(
                                               'assets/svg_icons/eye.svg',
-                                        color: ColorPalette.white,
+                                              color: ColorPalette.white,
                                             ),
                                       onPressed: () {
                                         setState(() {
@@ -124,6 +124,7 @@ class _ChoosePasswordState extends State<ChoosePassword> {
                                 ),
                                 SizedBox(height: 10),
                                 TextFormField(
+                                  cursorColor: ColorPalette.white,
                                   style: TextStyle(color: ColorPalette.white),
                                   controller: _confirmController,
                                   obscureText: _hidePass,

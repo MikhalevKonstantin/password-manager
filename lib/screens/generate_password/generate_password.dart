@@ -10,7 +10,7 @@ class GeneratePassword extends StatefulWidget {
 }
 
 class _GeneratePasswordState extends State<GeneratePassword> {
-  bool _value = false;
+  var _text = false;
   double val = 16;
   var _uppercase = true;
   var _lowercase = false;
@@ -54,11 +54,27 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                   ),
                   SizedBox(width: 10),
                   GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        setState(() {
+                          _text = !_text;
+                        });
+                      },
                       child: SvgPicture.asset(
                           'assets/svg_icons/generate_password.svg')),
                 ],
               ),
+              _text
+                  ? Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SvgPicture.asset('assets/svg_icons/done.svg'),
+                        Text(
+                          'Password has been copied!',
+                          style: TextThemes.hedline_9,
+                        ),
+                      ],
+                    )
+                  : Container(),
               Text('Length: ${val.toInt()}',
                   style: TextThemes.hedline_5
                       .copyWith(color: ColorPalette.c9FA2B2)),
@@ -73,8 +89,11 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      child: Text('4',style: TextThemes.hedline_5
-                          .copyWith(color: ColorPalette.c3A3943),),
+                      child: Text(
+                        '4',
+                        style: TextThemes.hedline_5
+                            .copyWith(color: ColorPalette.c3A3943),
+                      ),
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width - 80,
@@ -92,8 +111,11 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                           }),
                     ),
                     Container(
-                      child: Text('32',style: TextThemes.hedline_2
-                          .copyWith(color: ColorPalette.c3A3943),),
+                      child: Text(
+                        '32',
+                        style: TextThemes.hedline_2
+                            .copyWith(color: ColorPalette.c3A3943),
+                      ),
                     ),
                   ],
                 ),
@@ -114,8 +136,11 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Allow All Character Types',style: TextThemes.hedline_2
-                          .copyWith(color: ColorPalette.c3A3943),),
+                      Text(
+                        'Allow All Character Types',
+                        style: TextThemes.hedline_2
+                            .copyWith(color: ColorPalette.c3A3943),
+                      ),
                       GestureDetector(
                           onTap: () {},
                           child: SvgPicture.asset('assets/svg_icons/done.svg'))
@@ -134,8 +159,11 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Use Uppercase (A-Z)',style: TextThemes.hedline_2
-                          .copyWith(color: ColorPalette.c3A3943),),
+                      Text(
+                        'Use Uppercase (A-Z)',
+                        style: TextThemes.hedline_2
+                            .copyWith(color: ColorPalette.c3A3943),
+                      ),
                       GestureDetector(
                         onTap: () {
                           setState(() {
@@ -167,8 +195,11 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Use Lowercase (a-z)',style: TextThemes.hedline_2
-                          .copyWith(color: ColorPalette.c3A3943),),
+                      Text(
+                        'Use Lowercase (a-z)',
+                        style: TextThemes.hedline_2
+                            .copyWith(color: ColorPalette.c3A3943),
+                      ),
                       GestureDetector(
                         onTap: () {
                           setState(() {
@@ -200,8 +231,11 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Include symbols (!@#%)',style: TextThemes.hedline_2
-                          .copyWith(color: ColorPalette.c3A3943),),
+                      Text(
+                        'Include symbols (!@#%)',
+                        style: TextThemes.hedline_2
+                            .copyWith(color: ColorPalette.c3A3943),
+                      ),
                       GestureDetector(
                         onTap: () {
                           setState(() {
@@ -233,8 +267,11 @@ class _GeneratePasswordState extends State<GeneratePassword> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Include numbers (0-9)',style: TextThemes.hedline_2
-                          .copyWith(color: ColorPalette.c3A3943),),
+                      Text(
+                        'Include numbers (0-9)',
+                        style: TextThemes.hedline_2
+                            .copyWith(color: ColorPalette.c3A3943),
+                      ),
                       GestureDetector(
                         onTap: () {
                           setState(() {

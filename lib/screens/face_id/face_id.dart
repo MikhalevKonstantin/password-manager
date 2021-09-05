@@ -22,12 +22,11 @@ class _FaceIDState extends State<FaceID> {
         backgroundColor: ColorPalette.white,
         leadingWidth: 70,
         leading: Padding(
-          padding: EdgeInsets.only(left: 20
-           ),
+          padding: EdgeInsets.only(left: 20),
           child: GestureDetector(
-              onTap: () {
-                Navigator.of(context).pop();
-              },
+            onTap: () {
+              Navigator.of(context).pop();
+            },
             child: SvgPicture.asset(
               'assets/svg_icons/back.svg',
               height: 45,
@@ -37,7 +36,8 @@ class _FaceIDState extends State<FaceID> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 20, right: 20,top: 21, bottom: 20),
+        padding:
+            const EdgeInsets.only(left: 20, right: 20, top: 21, bottom: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,75 +111,5 @@ class _FaceIDState extends State<FaceID> {
         ),
       ),
     );
-    //Scaffold(
-    //   //backgroundColor: ColorPalette.ce5e5e5,
-    //   body: Container(
-    //     width: MediaQuery.of(context).size.width,
-    //     height: MediaQuery.of(context).size.height,
-    //     child: Column(
-    //       //mainAxisAlignment: MainAxisAlignment.start,
-    //       children: [
-    //         Flexible(
-    //           flex: 1,
-    //           child: Column(
-    //             crossAxisAlignment: CrossAxisAlignment.start,
-    //             mainAxisAlignment: MainAxisAlignment.start,
-    //             children: [
-    //               SvgPicture.asset(
-    //                 'assets/svg_icons/back.svg',
-    //                 height: 45,
-    //                 width: 45,
-    //                 //color: ColorPalette.cC6C5CA,
-    //               ),
-    //               SizedBox(height: 21),
-    //               Text(
-    //                 'Login with Face ID',
-    //                 style: TextThemes.hedline_22,
-    //               ),
-    //               SizedBox(height: 9),
-    //               Text(
-    //                 'Use Face ID for quick authorization and \n'
-    //                 'ensure the safety of your data',
-    //                 style: TextThemes.hedline_2
-    //                     .copyWith(color: ColorPalette.c616E7C),
-    //               ),
-    //             ],
-    //           ),
-    //         ),
-    //         Flexible(
-    //           flex: 2,
-    //           child: Image.asset('assets/images/fase128.png'),
-    //         ),
-    //         Flexible(
-    //           flex: 1,
-    //           child: Column(
-    //             children: [
-    //               TextButton(
-    //                   onPressed: () {},
-    //                   child: Text(
-    //                     'Skip for now',
-    //                     style: TextThemes.hedline_4.copyWith(color: ColorPalette.c53c1fc),
-    //                   ),),
-    //               SizedBox(height: 36),
-    //               Container(
-    //                 width: MediaQuery.of(context).size.width - 40,
-    //                 child: CupertinoButton(
-    //                   borderRadius: BorderRadius.circular(20),
-    //                   onPressed: () {},
-    //                   color: Colors.white,
-    //                   child: Text(
-    //                     'Use Face ID',
-    //                     style: TextThemes.hedline_4
-    //                         .copyWith(color: ColorPalette.c53c1fc),
-    //                   ),
-    //                 ),
-    //               ),
-    //             ],
-    //           ),
-    //         ),
-    //       ],
-    //     ),
-    //   ),
-    // );
   }
 }

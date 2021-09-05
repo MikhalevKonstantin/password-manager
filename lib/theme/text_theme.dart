@@ -26,7 +26,7 @@ class TextThemes {
       height: 1.5,
       color: ColorPalette.white);
 
- // 14 24
+  // 14 24
   static var hedline_3 = TextStyle(
       fontFamily: 'Manrope Regular',
       fontWeight: FontWeight.w400,
@@ -50,7 +50,7 @@ class TextThemes {
       height: 1.28,
       color: ColorPalette.white);
 
- // 24 30
+  // 24 30
   static var hedline_6 = TextStyle(
       fontFamily: 'Manrope Bold',
       fontWeight: FontWeight.w600,
@@ -58,7 +58,7 @@ class TextThemes {
       height: 1.25,
       color: ColorPalette.c3A3943);
 
- // 14 19
+  // 14 19
   static var hedline_7 = TextStyle(
       fontFamily: 'Manrope Regular',
       fontWeight: FontWeight.w400,
@@ -169,14 +169,14 @@ class TextThemes {
       fontWeight: FontWeight.w400,
       height: 1.45,
       color: ColorPalette.c616E7C);
-  // 11 16
+  // 21 16
   static var hedline_21 = TextStyle(
       fontFamily: 'Manrope Regular',
       fontSize: 21,
       fontWeight: FontWeight.w400,
       height: 1.38,
       color: ColorPalette.white);
- // 20 24
+  // 20 24
   static var hedline_22 = TextStyle(
       fontFamily: 'Manrope Bold',
       fontWeight: FontWeight.w700,

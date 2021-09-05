@@ -13,7 +13,6 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
-  double val = 16;
   var _faceId = true;
 
   @override
@@ -167,9 +166,9 @@ class _SettingsState extends State<Settings> {
                               .copyWith(color: ColorPalette.c3A3943),
                         ),
                         GestureDetector(
-                            onTap: () {
-                            },
-                            child: SvgPicture.asset('assets/svg_icons/arrow.svg'))
+                            onTap: () {},
+                            child:
+                                SvgPicture.asset('assets/svg_icons/arrow.svg'))
                       ],
                     ),
                   ),

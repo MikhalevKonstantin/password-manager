@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:password_manager/screens/generate_password/generate_password.dart';
+import 'package:password_manager/screens/password_check/password_check.dart';
 import 'package:password_manager/screens/passwords/passwords.dart';
-import 'package:password_manager/screens/security/security.dart';
 import 'package:password_manager/screens/settings/settings.dart';
 import 'package:password_manager/theme/color_theme.dart';
-
 
 class MainOff extends StatefulWidget {
   @override
@@ -18,7 +17,7 @@ class _MainScreenState extends State<MainOff> {
   static List<Widget> _widgetOptions = <Widget>[
     Passwords(),
     GeneratePassword(),
-    Security(),
+    PasswordCheck(),
     Settings(),
   ];
 
@@ -46,36 +45,28 @@ class _MainScreenState extends State<MainOff> {
           elevation: 0,
           items: [
             BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  'assets/svg_icons/list.svg',
-                  color: _selectedIndex == 0
-                      ? ColorPalette.c53c1fc
-                      : ColorPalette.cBABEC7
-                ),
+                icon: SvgPicture.asset('assets/svg_icons/list.svg',
+                    color: _selectedIndex == 0
+                        ? ColorPalette.c53c1fc
+                        : ColorPalette.cBABEC7),
                 label: '1'),
             BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  'assets/svg_icons/locker.svg',
-                  color: _selectedIndex == 1
-                      ? ColorPalette.c53c1fc
-                      : ColorPalette.cBABEC7
-                ),
+                icon: SvgPicture.asset('assets/svg_icons/locker.svg',
+                    color: _selectedIndex == 1
+                        ? ColorPalette.c53c1fc
+                        : ColorPalette.cBABEC7),
                 label: '2'),
             BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  'assets/svg_icons/shield.svg',
-                  color: _selectedIndex == 2
-                      ? ColorPalette.c53c1fc
-                      : ColorPalette.cBABEC7
-                ),
+                icon: SvgPicture.asset('assets/svg_icons/shield.svg',
+                    color: _selectedIndex == 2
+                        ? ColorPalette.c53c1fc
+                        : ColorPalette.cBABEC7),
                 label: '3'),
             BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  'assets/svg_icons/calendar.svg',
-                  color: _selectedIndex == 3
-                      ? ColorPalette.c53c1fc
-                      : ColorPalette.cBABEC7
-                ),
+                icon: SvgPicture.asset('assets/svg_icons/calendar.svg',
+                    color: _selectedIndex == 3
+                        ? ColorPalette.c53c1fc
+                        : ColorPalette.cBABEC7),
                 label: '4'),
           ],
         ),
