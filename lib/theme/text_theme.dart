@@ -176,4 +176,11 @@ class TextThemes {
       fontWeight: FontWeight.w400,
       height: 1.38,
       color: ColorPalette.white);
+ // 20 24
+  static var hedline_22 = TextStyle(
+      fontFamily: 'Manrope Bold',
+      fontWeight: FontWeight.w700,
+      fontSize: 20,
+      height: 1.2,
+      color: ColorPalette.c3A3943);
 }
