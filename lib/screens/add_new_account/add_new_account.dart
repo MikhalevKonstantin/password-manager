@@ -117,6 +117,8 @@ class _AddNewAccountState extends State<AddNewAccount> {
                               style: TextThemes.hedline_2
                                   .copyWith(color: ColorPalette.c3A3943),
                             ),
+                            //horizontalTitleGap: 20,
+                            //contentPadding: EdgeInsets.all(8),
                           ),
                           ListTile(
                             title: Text(

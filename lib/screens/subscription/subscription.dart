@@ -114,7 +114,7 @@ class _SubscriptionState extends State<Subscription> {
                           onPressed: () {},
                           color: ColorPalette.c53c1fc,
                           child: Text(
-                            ' Start Free Trial and Subscribe',
+                            'Start Free Trial and Subscribe',
                             style: TextThemes.hedline_4
                                 .copyWith(color: ColorPalette.white),
                           ),
@@ -227,6 +227,7 @@ class _SubscriptionState extends State<Subscription> {
                         style: TextThemes.hedline_20,
                         textAlign: TextAlign.center,
                       ),
+                      SizedBox(height: 30),
                     ],
                   ),
                 ),

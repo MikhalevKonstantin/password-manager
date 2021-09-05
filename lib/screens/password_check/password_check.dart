@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:password_manager/screens/result/result_account.dart';
+import 'package:password_manager/screens/result/result_password.dart';
 import 'package:password_manager/theme/color_theme.dart';
 import 'package:password_manager/theme/text_theme.dart';
 
@@ -63,25 +65,27 @@ class _PasswordCheckState extends State<PasswordCheck> {
                         SizedBox(height: 20),
                         Divider(),
                         SizedBox(height: 14),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text('Check your account',
-                                style: TextThemes.hedline_11
-                                    .copyWith(color: ColorPalette.c53c1fc)),
-                            GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  plus1 = !plus1;
-                                });
-                              },
-                              child: plus1
-                                  ? SvgPicture.asset(
-                                      'assets/svg_icons/Plus.svg')
-                                  : SvgPicture.asset(
-                                      'assets/svg_icons/minus.svg'),
-                            ),
-                          ],
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              plus1 = !plus1;
+                            });
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('Check your account',
+                                  style: TextThemes.hedline_11
+                                      .copyWith(color: ColorPalette.c53c1fc)),
+                              GestureDetector(
+                                child: plus1
+                                    ? SvgPicture.asset(
+                                        'assets/svg_icons/Plus.svg')
+                                    : SvgPicture.asset(
+                                        'assets/svg_icons/minus.svg'),
+                              ),
+                            ],
+                          ),
                         ),
                         plus1
                             ? Container()
@@ -126,7 +130,13 @@ class _PasswordCheckState extends State<PasswordCheck> {
                                           'Check Breaches',
                                           style: TextThemes.hedline_4,
                                         ),
-                                        onPressed: () {}),
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            CupertinoPageRoute(
+                                                builder: (context) => ResultAccount()),
+                                          );
+                                        }),
                                   ),
                                   SizedBox(height: 30),
                                   Text(
@@ -153,7 +163,7 @@ class _PasswordCheckState extends State<PasswordCheck> {
                                         ),
                                         child: Center(
                                           child: Text(
-                                            'Create new record',
+                                            'Check Pastes',
                                             style:
                                                 TextThemes.hedline_4.copyWith(
                                               color: ColorPalette.c53c1fc,
@@ -193,30 +203,32 @@ class _PasswordCheckState extends State<PasswordCheck> {
                         SizedBox(height: 20),
                         Divider(),
                         SizedBox(height: 14),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Check your password',
-                              style: TextThemes.hedline_11.copyWith(
-                                color: ColorPalette.c53c1fc,
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              plus2 = !plus2;
+                            });
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Check your password',
+                                style: TextThemes.hedline_11.copyWith(
+                                  color: ColorPalette.c53c1fc,
+                                ),
                               ),
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  plus2 = !plus2;
-                                });
-                              },
-                              child: plus2
-                                  ? SvgPicture.asset(
-                                      'assets/svg_icons/Plus.svg',
-                                    )
-                                  : SvgPicture.asset(
-                                      'assets/svg_icons/minus.svg',
-                                    ),
-                            ),
-                          ],
+                              GestureDetector(
+                                child: plus2
+                                    ? SvgPicture.asset(
+                                        'assets/svg_icons/Plus.svg',
+                                      )
+                                    : SvgPicture.asset(
+                                        'assets/svg_icons/minus.svg',
+                                      ),
+                              ),
+                            ],
+                          ),
                         ),
                         plus2
                             ? Container()
@@ -285,7 +297,13 @@ class _PasswordCheckState extends State<PasswordCheck> {
                                           'Check Password',
                                           style: TextThemes.hedline_4,
                                         ),
-                                        onPressed: () {}),
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            CupertinoPageRoute(
+                                                builder: (context) => ResultPassword()),
+                                          );
+                                        }),
                                   ),
                                   SizedBox(height: 15),
                                   Align(
@@ -296,7 +314,66 @@ class _PasswordCheckState extends State<PasswordCheck> {
                                         style: TextThemes.hedline_11.copyWith(
                                             color: ColorPalette.c53c1fc),
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (context) {
+                                            return Column(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                Dialog(
+                                                  shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              20)),
+                                                  child: Container(
+                                                    alignment: Alignment.center,
+                                                    height: 232,
+                                                    width:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .width -
+                                                            40,
+                                                    child: Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        Text(
+                                                          'We will securely hash your'
+                                                          '\npassword locally on your device,'
+                                                          '\nthen compare the hashed'
+                                                          '\npassword to the list of leaked'
+                                                          '\npasswords. Your password will'
+                                                          '\nnever leave your device.',
+                                                          textAlign:
+                                                              TextAlign.center,
+                                                          style: TextThemes
+                                                              .hedline_2
+                                                              .copyWith(
+                                                                  color: ColorPalette
+                                                                      .c3A3943),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                                GestureDetector(
+                                                  onTap: () {
+                                                    Navigator.of(
+                                                        context)
+                                                        .pop();
+                                                  },
+                                                  child:
+                                                  SvgPicture.asset(
+                                                    'assets/svg_icons/close1.svg',
+                                                  ),
+                                                ),
+                                              ],
+                                            );
+                                          },
+                                        );
+                                      },
                                     ),
                                   ),
                                 ],

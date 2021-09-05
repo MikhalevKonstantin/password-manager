@@ -96,27 +96,27 @@ class _PasswordsState extends State<Passwords> {
               // ListTile Passwords
               //
               //
-              // GestureDetector(
-              //   onTap: () {
-              //     _modalBottomSheetMenu();
-              //   },
-              //   child: ListTile(
-              //     shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.circular(20)),
-              //     tileColor: ColorPalette.white,
-              //     title: Text(
-              //       'Amazone',
-              //       style: TextThemes.hedline_10,
-              //     ),
-              //     subtitle: Text(
-              //       'https://amazone.com',
-              //       style: TextThemes.hedline_9,
-              //     ),
-              //     trailing: SvgPicture.asset('assets/svg_icons/action.svg'),
-              //   ),
-              // ),
-              //
-              //
+              GestureDetector(
+                onTap: () {
+                  _modalBottomSheetMenu();
+                },
+                child: ListTile(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  tileColor: ColorPalette.white,
+                  title: Text(
+                    'Amazone',
+                    style: TextThemes.hedline_10,
+                  ),
+                  subtitle: Text(
+                    'https://amazone.com',
+                    style: TextThemes.hedline_9,
+                  ),
+                  trailing: SvgPicture.asset('assets/svg_icons/action.svg'),
+                ),
+              ),
+
+
             ],
           ),
         ),
@@ -181,7 +181,7 @@ class _PasswordsState extends State<Passwords> {
                     visualDensity: VisualDensity.compact,
                     dense: true,
                     title: Text(
-                      'Copy password',
+                      'View',
                       style: TextThemes.hedline_12,
                     ),
                     leading: SvgPicture.asset('assets/svg_icons/document.svg'),
