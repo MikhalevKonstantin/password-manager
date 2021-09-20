@@ -8,6 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import 'package:password_manager/logic/store/app_state.dart';
 import 'package:password_manager/main.dart';
 
 void main() {
